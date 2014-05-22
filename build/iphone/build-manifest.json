@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "universal",
+	"iosSdkPath": "/Users/takahashi/Library/Application Support/Titanium/mobilesdk/osx/3.2.2.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "96e9a07",
+	"name": "meigen.app",
+	"id": "meigen.app",
+	"analytics": true,
+	"publisher": "takahashi",
+	"url": "http://",
+	"version": "1.0",
+	"description": "not specified",
+	"copyright": "2014 by takahashi",
+	"guid": "433eb567-2541-4236-9910-c5d7202fc181",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}

@@ -1,0 +1,31 @@
+"#row": {
+        width: Ti.UI.FILL,
+        height: "86dp",
+},
+
+"#title": {
+        width: Ti.UI.FILL,
+        height: Ti.UI.FILL,
+        left: "24dp",
+        color: "#a62901",
+        font: {fontSize:"16dp" ,fontWeight:"bold"},
+},
+"#image": {
+        width: "120dp",
+        height: "60dp",
+        right: "24dp"
+},
+"#meigenText": {
+	/* right:"0dp", */
+	/* bottom:"20dp", */
+},
+"#createdAt": {
+	right:"0dp",
+	bottom:"15dp",
+	font:{ fontSize:"14dp" }
+}
+"#speaker": {
+	right:"0dp",
+	bottom:"0dp",
+	font:{ fontSize:"15dp" }
+}

@@ -1,0 +1,10 @@
+<Alloy>
+
+　　<TableViewRow id="row">
+　　　　<ImageView id="meigenImageUrl" image="" />
+		<Label id="meigenText"></Label>
+		<Label id="createdAt"></Label>
+		<Label id="speaker"></Label>
+　　</TableViewRow>
+
+</Alloy>
