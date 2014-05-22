@@ -39,7 +39,7 @@
 
 	$.tableView.addEventListener("scroll", function(e) {
 		var heightFromBottom = e.contentSize.height - e.contentOffset.y;
-		if (heightFromBottom <= (e.size.height - 130)) {
+		if (heightFromBottom <= (e.size.height - 40)) {
 			drawNextPage();
 		}
 	});
