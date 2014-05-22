@@ -1,10 +1,12 @@
 <Alloy>
-
 　　<TableViewRow id="row">
-　　　　<ImageView id="meigenImageUrl" image="" />
+		<View class="left-container">
+		<ImageView id="meigenImageUrl" class="main_images" image="" />
+		</View>
+		<View class="right-container">
 		<Label id="meigenText"></Label>
 		<Label id="createdAt"></Label>
-		<Label id="speaker"></Label>
+		<Label id="speaker"></Label>			
+		</View>
 　　</TableViewRow>
-
 </Alloy>

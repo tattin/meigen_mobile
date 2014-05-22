@@ -3,18 +3,6 @@
         height: "86dp",
 },
 
-"#title": {
-        width: Ti.UI.FILL,
-        height: Ti.UI.FILL,
-        left: "24dp",
-        color: "#a62901",
-        font: {fontSize:"16dp" ,fontWeight:"bold"},
-},
-"#image": {
-        width: "120dp",
-        height: "60dp",
-        right: "24dp"
-},
 "#meigenText": {
 	/* right:"0dp", */
 	/* bottom:"20dp", */
@@ -24,8 +12,16 @@
 	bottom:"15dp",
 	font:{ fontSize:"14dp" }
 }
-"#speaker": {
+,"#speaker": {
 	right:"0dp",
 	bottom:"0dp",
 	font:{ fontSize:"15dp" }
+}
+,".left-container": {
+	width:"30%",
+	left: "0dp"
+}
+,".right-container": {
+	width:"70%",
+	right: "0dp"
 }

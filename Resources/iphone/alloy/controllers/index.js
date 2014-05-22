@@ -18,25 +18,41 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     (function() {
-        var xhr = Ti.Network.createHTTPClient();
-        xhr.open("GET", "http://meigen.do-ing.net/meigen/api.php?mode=list");
-        xhr.onload = function() {
-            var jsonText = this.responseText;
-            var meigens = JSON.parse(jsonText);
-            for (var i = 0; meigens.length > i; i++) {
-                var bgcolor = 0 == i % 2 ? true : false;
-                var row = Alloy.createController("row", {
-                    id: i + 1,
-                    bgcolor: bgcolor,
-                    meigenImageUrl: meigens[i].meigen_image_url,
-                    meigenText: meigens[i].meigen_text,
-                    createdAt: meigens[i].created_at,
-                    speaker: meigens[i].speaker
-                }).getView();
-                $.tableView.appendRow(row);
-            }
+        var pageIndex = 1;
+        var connecting = false;
+        var drawNextPage = function() {
+            if (connecting) return;
+            connecting = true;
+            var xhr = Ti.Network.createHTTPClient();
+            xhr.onload = function() {
+                try {
+                    var jsonText = this.responseText;
+                    var meigens = JSON.parse(jsonText);
+                    for (var i = 0; meigens.length > i; i++) {
+                        console.log(meigens[i].meigen_text);
+                        var bgcolor = 0 == i % 2 ? true : false;
+                        var row = Alloy.createController("row", {
+                            id: i + 1,
+                            bgcolor: bgcolor,
+                            meigenImageUrl: meigens[i].meigen_image_url,
+                            meigenText: meigens[i].meigen_text,
+                            createdAt: meigens[i].created_at,
+                            speaker: meigens[i].speaker
+                        }).getView();
+                        $.tableView.appendRow(row);
+                    }
+                } finally {
+                    connecting = false;
+                }
+            };
+            xhr.open("GET", "http://meigen.do-ing.net/meigen/api.php?mode=list&page_no=" + pageIndex++);
+            xhr.send();
         };
-        xhr.send();
+        $.tableView.addEventListener("scroll", function(e) {
+            var heightFromBottom = e.contentSize.height - e.contentOffset.y;
+            e.size.height - 110 >= heightFromBottom && drawNextPage();
+        });
+        drawNextPage();
         $.index.open();
     })();
     _.extend($, exports);

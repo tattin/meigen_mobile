@@ -12,15 +12,27 @@ function Controller() {
         id: "row"
     });
     $.__views.row && $.addTopLevelView($.__views.row);
+    $.__views.__alloyId0 = Ti.UI.createView({
+        width: "30%",
+        left: "0dp",
+        id: "__alloyId0"
+    });
+    $.__views.row.add($.__views.__alloyId0);
     $.__views.meigenImageUrl = Ti.UI.createImageView({
         id: "meigenImageUrl",
         image: ""
     });
-    $.__views.row.add($.__views.meigenImageUrl);
+    $.__views.__alloyId0.add($.__views.meigenImageUrl);
+    $.__views.__alloyId1 = Ti.UI.createView({
+        width: "70%",
+        right: "0dp",
+        id: "__alloyId1"
+    });
+    $.__views.row.add($.__views.__alloyId1);
     $.__views.meigenText = Ti.UI.createLabel({
         id: "meigenText"
     });
-    $.__views.row.add($.__views.meigenText);
+    $.__views.__alloyId1.add($.__views.meigenText);
     $.__views.createdAt = Ti.UI.createLabel({
         right: "0dp",
         bottom: "15dp",
@@ -29,7 +41,7 @@ function Controller() {
         },
         id: "createdAt"
     });
-    $.__views.row.add($.__views.createdAt);
+    $.__views.__alloyId1.add($.__views.createdAt);
     $.__views.speaker = Ti.UI.createLabel({
         right: "0dp",
         bottom: "0dp",
@@ -38,7 +50,7 @@ function Controller() {
         },
         id: "speaker"
     });
-    $.__views.row.add($.__views.speaker);
+    $.__views.__alloyId1.add($.__views.speaker);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};

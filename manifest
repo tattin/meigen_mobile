@@ -1,9 +1,8 @@
-#appname: meigen.app
-#appid: meigen.app
-#type: mobile
-#guid: 433eb567-2541-4236-9910-c5d7202fc181
-#version: 1.0
-#publisher: not specified
-#url: not specified
+#appname: HelloWorld
+#publisher: genzouw
+#url: http://
 #image: appicon.png
-#desc: not specified
+#appid: com.genzouw.helloworld
+#desc: undefined
+#type: ipad
+#guid: c3b0f963-192e-4f8f-b442-6de50f9b4061
